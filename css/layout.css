@@ -1,0 +1,7 @@
+/* layout.css */
+.hero{background:var(--teal);color:#fff;padding:26px max(18px,calc((100% - 1200px)/2)) 70px;clip-path:polygon(0 0,100% 0,100% 78%,0 100%);margin-bottom:-34px}
+.hero small{display:block;color:var(--amber);font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}
+.hero h1{margin:0;font-weight:800;font-size:clamp(30px,6vw,44px);line-height:1.05}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
+.card{background:var(--gray);border-left:6px solid var(--sky);border-radius:4px;padding:20px;margin-bottom:18px}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}.nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:5px 14px;border-radius:9999px;border:1px solid rgba(255,255,255,.4)}.nav a.on{background:var(--amber);color:#2b2100;border-color:var(--amber)}.row3{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:10px}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:12px}

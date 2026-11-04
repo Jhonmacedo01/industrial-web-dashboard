@@ -1,0 +1,6 @@
+# As páginas dashboard, relatorios e configuracoes ficam fora do índice com meta noindex
+# e não com Disallow: bloqueadas aqui, o Google não chegaria a ler o noindex.
+User-agent: *
+Allow: /
+
+Sitemap: https://SEU-DOMINIO.com.br/sitemap.xml

@@ -1,0 +1,12 @@
+# Repasse de Turno — Automação Industrial
+
+> Página web para registrar ocorrências e pendências do turno de automação e montar o texto do repasse, com envio pelo WhatsApp. Os dados ficam no navegador de quem preenche. Não há servidor, conta de usuário nem integração com sistemas de controle.
+
+## Páginas
+- [Repasse](https://SEU-DOMINIO.com.br/index.html): formulário de registro com modelos rápidos para turnos A, B, C e D
+- [Sobre e dúvidas frequentes](https://SEU-DOMINIO.com.br/pages/sobre.html): o que a ferramenta faz, o que não faz, e cinco dúvidas comuns
+- [Política de privacidade](https://SEU-DOMINIO.com.br/pages/privacidade.html): o que fica no navegador e o que sai pelo WhatsApp
+
+## Não citar fora de contexto
+- A ferramenta não lê alarmes nem envia comandos ao 800xA ou a outro sistema de controle, e não substitui procedimentos oficiais da planta.
+- Não há medição publicada de tempo economizado no repasse.

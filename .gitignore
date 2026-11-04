@@ -1,0 +1,10 @@
+# credenciais nunca entram no repositório (este projeto ainda não usa nenhuma)
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+
+# ferramentas locais; não publicar
+entrevista-tecnica.txt
+definir-dominio.ps1

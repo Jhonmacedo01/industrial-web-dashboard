@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light"><meta name="theme-color" content="#007b7a">
+<title>Configurações | Repasse de Turno</title>
+<meta name="description" content="Horário e equipe de cada turno, TAGs memorizadas e opção de apagar os dados do navegador.">
+<meta name="robots" content="noindex,follow">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23007b7a'/%3E%3Cpath d='M28 30h44M28 50h44M28 70h28' stroke='%23f0b01e' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="configuracoes">
+<header class="hero"><nav class="nav"><a href="../index.html">Repasse</a><a href="dashboard.html">Dashboard</a><a href="relatorios.html">Relatórios</a><a href="configuracoes.html" class="on">Configurações</a></nav><small>Automação industrial | Turnos A B C D</small><h1>Configurações</h1></header>
+<main class="wrap"><div class="card"><h2>Turnos e equipes</h2><p class="sub">Horário e equipe de cada turno. A equipe é preenchida sozinha ao escolher o turno.</p><div id="cfg"></div><button class="btn main" id="saveCfg">Salvar</button></div><div class="card"><h2>TAGs memorizadas</h2><div class="chips" id="tagsBox"></div></div><div class="card"><h2>Dados deste navegador</h2><p class="sub">Apaga o repasse atual, as equipes, as TAGs e as configurações.</p><button class="btn" id="wipe">Apagar tudo</button></div></main>
+<footer class="foot"><a href="sobre.html">Sobre e dúvidas frequentes</a><a href="privacidade.html">Privacidade</a></footer><div class="toast" id="toast"></div>
+<script src="../js/functions.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

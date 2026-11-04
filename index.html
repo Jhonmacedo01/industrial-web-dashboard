@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light"><meta name="theme-color" content="#007b7a">
+<title>Repasse de Turno — Automação Industrial</title>
+<meta name="description" content="Registre ocorrências e pendências do turno de automação e gere o repasse pronto para o WhatsApp. Turnos A, B, C e D, sem login e sem instalação.">
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23007b7a'/%3E%3Cpath d='M28 30h44M28 50h44M28 70h28' stroke='%23f0b01e' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://SEU-DOMINIO.com.br/index.html">
+<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:title" content="Repasse de Turno — Automação Industrial"><meta property="og:description" content="Registre ocorrências e pendências do turno de automação e gere o repasse pronto para o WhatsApp. Turnos A, B, C e D, sem login e sem instalação."><meta property="og:url" content="https://SEU-DOMINIO.com.br/index.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Repasse de Turno — Automação Industrial", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "inLanguage": "pt-BR", "description": "Registre ocorrências e pendências do turno de automação e gere o repasse pronto para o WhatsApp. Turnos A, B, C e D, sem login e sem instalação.", "url": "https://SEU-DOMINIO.com.br/index.html"}</script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="index">
+<header class="hero"><nav class="nav"><a href="index.html" class="on">Repasse</a><a href="pages/dashboard.html">Dashboard</a><a href="pages/relatorios.html">Relatórios</a><a href="pages/configuracoes.html">Configurações</a></nav><small>Automação industrial | Turnos A B C D</small><h1>Repasse de Turno</h1><p class="lead">Registre as ocorrências do turno, marque as pendências e envie o repasse pronto pelo WhatsApp.</p></header>
+<main class="wrap"><div class="grid">
+<section class="left">
+<details class="card" id="turno" open><summary><h2 style="margin:0">Turno</h2><span class="sub" id="sum"></span></summary>
+<div style="margin-top:18px"><div class="chips f" id="shiftSeg"></div>
+<div class="row"><div class="f"><label for="date">Data</label><input id="date" type="date"></div><div class="f"><label for="hours">Horário</label><input id="hours"></div></div>
+<div class="row"><div class="f"><label for="t1">Equipe 1</label><input id="t1" list="names" autocomplete="off"></div><div class="f"><label for="t2">Equipe 2</label><input id="t2" list="names" autocomplete="off"></div></div>
+<div class="row"><div class="f"><label for="om">OM</label><input id="om" placeholder="Opcional"></div><div class="f"><label for="nics">NICs</label><input id="nics" placeholder="Ex.: 01. BM1080KS01"></div></div>
+<p class="sub" style="margin:0">A equipe de cada turno fica memorizada neste navegador. Digite só o que a operação precisa, sem CPF, telefone ou dados de terceiros.</p></div></details>
+
+<div class="card"><h2 id="evTitle">Nova ocorrência</h2>
+<label>Modelos rápidos</label><div class="chips tpl f" id="tpls"></div>
+<div class="row"><div class="f"><label for="asset">TAG / equipamento</label><input id="asset" list="tags" autocomplete="off" placeholder="TR1080KS37"></div>
+<div class="f"><label for="time">Hora</label><div class="actions" style="flex-wrap:nowrap"><input id="time" type="time"><button class="btn sm" id="now" type="button">Agora</button></div></div></div>
+<div class="chips f" id="kindSeg"></div>
+<div class="f"><label for="desc">Relato e ação <span class="sub">· <kbd>Tab</kbd> pula para o próximo ___ · <kbd>Ctrl</kbd>+<kbd>Enter</kbd> adiciona</span></label><textarea id="desc" placeholder="O que foi identificado e o que foi feito"></textarea></div>
+<label>Resultado <span class="sub">· “Pendente” cria a pendência sozinho</span></label><div class="chips f" id="resSeg"></div>
+<div class="actions"><button class="btn main" id="addEv">Adicionar ocorrência</button><button class="btn" id="clrEv">Limpar</button></div></div>
+
+<div class="card"><h2>Ocorrências</h2><div id="evs" class="list"></div></div>
+</section>
+
+<section>
+<div class="card"><h2>Pendências</h2>
+<div class="row f"><input id="pa" list="tags" autocomplete="off" placeholder="TAG"><input id="pd" placeholder="O que falta? Enter adiciona"></div>
+<div id="pends" class="list"></div></div>
+
+<div class="card noprint"><details><summary><h2 style="margin:0">Passagem entre turnos</h2><span class="sub">pendências</span></summary>
+<div style="margin-top:16px"><div class="actions f"><button class="btn" id="exp">Copiar código das pendências abertas</button></div>
+<div class="f"><label for="imp">Colar código do turno anterior</label><textarea id="imp" style="min-height:60px"></textarea></div>
+<div class="actions"><button class="btn" id="impBtn">Importar</button><button class="btn" id="clrAll">Limpar turno</button></div></div></details></div>
+
+<div class="card"><div class="top" style="margin-bottom:14px"><h2 style="margin:0">Prévia</h2><button class="btn sm noprint" id="print">Imprimir</button></div><pre class="out" id="out"></pre>
+<p class="sub noprint">Os dados ficam só neste navegador. Revise antes de enviar. Sem conexão com o 800xA.</p></div>
+</section></div></main>
+<footer class="foot"><a href="pages/sobre.html">Sobre e dúvidas frequentes</a><a href="pages/privacidade.html">Privacidade</a></footer>
+<datalist id="tags"></datalist><datalist id="names"></datalist>
+<div class="dock"><span id="count"></span><button class="btn" id="copy">Copiar</button><button class="btn main" id="wa" style="padding:10px 22px">Enviar no WhatsApp</button></div>
+<div class="toast" id="toast"></div>
+<script src="js/functions.js"></script>
+<script src="js/api.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
